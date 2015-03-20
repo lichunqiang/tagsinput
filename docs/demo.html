@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI Tags Input 使用演示 | Amaze UI 插件</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png"
+        href="http://a.static.amazeui.org/assets/i/favicon.png">
+  <link rel="stylesheet"
+        href="http://cdn.amazeui.org/amazeui/2.1.0/css/amazeui.min.css">
+  <link rel="stylesheet" href="http://a.static.amazeui.org/assets/plugin/css/app.min.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.1.0/js/amazeui.min.js"></script>
+  <!--<![endif]-->
+  <!--[if lte IE 8 ]>
+  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../amazeui.tagsinput.css"/>
+</head>
+<body class="am-plugin">
+<header class="am-topbar am-topbar-inverse">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="http://amazeui.org" class="am-text-ir">Amaze UI</a>
+      <span class="am-badge am-badge-danger">Plugin</span>
+    </h1>
+  </div>
+</header>
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI Tags Input</h1>
+    <p class="">Amaze UI 风格的 jQuery 标签输入插件。</p>
+      <p>
+        <a class="github-button" href="https://github.com/amazeui/tagsinput">Star</a>
+        <a class="github-button" href="https://github.com/amazeui/tagsinput">Fork</a>
+        <a class="github-button" href="https://github.com/amazeui/tagsinput/archive/master.zip">Download</a>
+      </p>
+  </div>
+</section>
+
+<section class="amp-main">
+  <div class="am-container">
+    <h2><a name="%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA" class="anchor" href="#%E4%BD%BF%E7%94%A8%E6%BC%94%E7%A4%BA"><span class="header-link"></span></a>使用演示</h2><hr>
+<h3><a name="%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F" class="anchor" href="#%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="header-link"></span></a>调用方式</h3><h4><a name="%E4%BD%BF%E7%94%A8%20input" class="anchor" href="#%E4%BD%BF%E7%94%A8%20input"><span class="header-link"></span></a>使用 input</h4><p>在 <code>input</code> 上添加 <code>data-role=&quot;tagsinput&quot;</code> 属性，自动初始化为标签输入框。
+  automatically change it to a tags input field.</p></p>
+<div class="doc-example"><p>
+  <input id="tags-1" type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo"
+         data-role="tagsinput"/>
+</p></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tags-1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Amsterdam,Washington,Sydney,Beijing,Cairo"</span> <span class="hljs-attribute">data-role</span>=<span class="hljs-value">"tagsinput"</span> /&gt;</span></code></pre></div><p>获取 <code>input</code> 的值：</p>
+<div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'#tags-1'</span>).val()
+<span class="hljs-comment">// "Amsterdam,Washington,Sydney,Beijing,Cairo"</span>
+
+$(<span class="hljs-string">'#tags-2'</span>).tagsinput(<span class="hljs-string">'items'</span>)
+<span class="hljs-comment">// ["Amsterdam", "Washington", "Sydney", "Beijing", "Cairo"]</span></code></pre></div><h4><a name="%E4%BD%BF%E7%94%A8%20select" class="anchor" href="#%E4%BD%BF%E7%94%A8%20select"><span class="header-link"></span></a>使用 select</h4><div class="doc-example"><select id="tags-select" multiple data-role="tagsinput">
+  <option value="Amsterdam">Amsterdam</option>
+  <option value="Washington">Washington</option>
+  <option value="Sydney">Sydney</option>
+  <option value="Beijing">Beijing</option>
+  <option value="Cairo">Cairo</option>
+</select></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">select</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"tags-select"</span> <span class="hljs-attribute">multiple</span> <span class="hljs-attribute">data-role</span>=<span class="hljs-value">"tagsinput"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Amsterdam"</span>&gt;</span>Amsterdam<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Washington"</span>&gt;</span>Washington<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Sydney"</span>&gt;</span>Sydney<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Beijing"</span>&gt;</span>Beijing<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">option</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Cairo"</span>&gt;</span>Cairo<span class="hljs-tag">&lt;/<span class="hljs-title">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">select</span>&gt;</span></code></pre></div><p>获取的值时都返回数组：</p>
+<div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'#tags-select'</span>).val();
+<span class="hljs-comment">// ["Amsterdam","Washington","Sydney","Beijing","Cairo"]</span>
+
+$(<span class="hljs-string">'#tags-select'</span>).tagsinput(<span class="hljs-string">'items'</span>);
+<span class="hljs-comment">// ["Amsterdam","Washington","Sydney","Beijing","Cairo"]</span></code></pre></div><h3><a name="%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA" class="anchor" href="#%E8%BE%93%E5%85%A5%E6%8F%90%E7%A4%BA"><span class="header-link"></span></a>输入提示</h3><p>结合 <a href="http://twitter.github.io/typeahead.js/">typeahead.js</a> 使用可以实现输入提示效果</p>
+<div class="doc-example"><input id="input-sg" type="text" value="Amsterdam,Washington" data-role="tagsinput" />
+<style>
+  .twitter-typeahead .tt-query,
+  .twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+  }
+
+  .twitter-typeahead .tt-hint
+  {
+    display: none;
+  }
+
+  .tt-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+  .tt-suggestion > p {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .tt-suggestion > p:hover,
+  .tt-suggestion > p:focus,
+  .tt-suggestion.tt-cursor p {
+    color: #ffffff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #428bca;
+  }
+</style></div><div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"input-sg"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">"Amsterdam,Washington"</span> <span class="hljs-attribute">data-role</span>=<span class="hljs-value">"tagsinput"</span> /&gt;</span></code></pre></div><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> citynames = <span class="hljs-keyword">new</span> Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace(<span class="hljs-string">'name'</span>),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: {
+    url: <span class="hljs-string">'js/citynames.json'</span>,
+    filter: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(list)</span> </span>{
+      <span class="hljs-keyword">return</span> $.map(list, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(cityname)</span> </span>{
+        <span class="hljs-keyword">return</span> { name: cityname }; });
+    }
+  }
+});
+citynames.initialize();
+
+$(<span class="hljs-string">'#input-sg'</span>).tagsinput({
+  typeaheadjs: {
+    name: <span class="hljs-string">'citynames'</span>,
+    displayKey: <span class="hljs-string">'name'</span>,
+    valueKey: <span class="hljs-string">'name'</span>,
+    source: citynames.ttAdapter()
+  }
+});</code></pre></div><h3><a name="%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E6%A0%87%E7%AD%BE" class="anchor" href="#%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E6%A0%87%E7%AD%BE"><span class="header-link"></span></a>对象作为标签</h3><p>标签需要存储更多数据时，可以在标签上存储对象。</p>
+<div class="doc-example"><input id="obj-as-tags" type="text" /></div><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-keyword">var</span> cities = <span class="hljs-keyword">new</span> Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace(<span class="hljs-string">'text'</span>),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: <span class="hljs-string">'assets/cities.json'</span>
+});
+cities.initialize();
+
+<span class="hljs-keyword">var</span> $elt = $(<span class="hljs-string">'#obj-as-tags'</span>);
+$elt.tagsinput({
+  itemValue: <span class="hljs-string">'value'</span>,
+  itemText: <span class="hljs-string">'text'</span>,
+  typeaheadjs: {
+    name: <span class="hljs-string">'cities'</span>,
+    displayKey: <span class="hljs-string">'text'</span>,
+    source: cities.ttAdapter()
+  }
+});
+
+$elt.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">1</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Amsterdam"</span>   , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Europe"</span>    });
+$elt.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">4</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Washington"</span>  , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"America"</span>   });
+$elt.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">7</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Sydney"</span>      , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Australia"</span> });
+$elt.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">10</span>, <span class="hljs-string">"text"</span>: <span class="hljs-string">"Beijing"</span>     , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Asia"</span>      });
+$elt.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">13</span>, <span class="hljs-string">"text"</span>: <span class="hljs-string">"Cairo"</span>       , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Africa"</span>    });</code></pre></div><p>获取值：</p>
+<div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-string">'#obj-as-tags'</span>).val();
+<span class="hljs-comment">// "1,4,7,10,13"</span>
+
+$(<span class="hljs-string">'#obj-as-tags'</span>).tagsinput(<span class="hljs-string">'items'</span>);
+<span class="hljs-comment">// [{"value":1,"text":"Amsterdam","continent":"Europe"},{"value":4,"text":"Washington","continent":"America"},{"value":7,"text":"Sydney","continent":"Australia"},{"value":10,"text":"Beijing","continent":"Asia"},{"value":13,"text":"Cairo","continent":"Africa"}]</span></code></pre></div><h3><a name="%E8%AE%BE%E7%BD%AE%E6%A0%87%E7%AD%BE%20class" class="anchor" href="#%E8%AE%BE%E7%BD%AE%E6%A0%87%E7%AD%BE%20class"><span class="header-link"></span></a>设置标签 class</h3><div class="doc-example"><input id="tag-color" type="text" /></div><div class="doc-code demo-highlight"><pre><code class="javascript"><span class="hljs-comment">// tag color</span>
+<span class="hljs-keyword">var</span> cities = <span class="hljs-keyword">new</span> Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace(<span class="hljs-string">'text'</span>),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: <span class="hljs-string">'js/cities.json'</span>
+});
+cities.initialize();
+
+<span class="hljs-keyword">var</span> $tc = $(<span class="hljs-string">'#tag-color'</span>);
+$tc.tagsinput({
+  tagClass: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(item)</span> </span>{
+    <span class="hljs-keyword">switch</span> (item.continent) {
+      <span class="hljs-keyword">case</span> <span class="hljs-string">'Europe'</span>   : <span class="hljs-keyword">return</span> <span class="hljs-string">'am-badge am-badge-primary'</span>;
+      <span class="hljs-keyword">case</span> <span class="hljs-string">'America'</span>  : <span class="hljs-keyword">return</span> <span class="hljs-string">'am-badge am-badge-danger'</span>;
+      <span class="hljs-keyword">case</span> <span class="hljs-string">'Australia'</span>: <span class="hljs-keyword">return</span> <span class="hljs-string">'am-badge am-badge-success'</span>;
+      <span class="hljs-keyword">case</span> <span class="hljs-string">'Africa'</span>   : <span class="hljs-keyword">return</span> <span class="hljs-string">'am-badge'</span>;
+      <span class="hljs-keyword">case</span> <span class="hljs-string">'Asia'</span>     : <span class="hljs-keyword">return</span> <span class="hljs-string">'am-badge am-badge-warning'</span>;
+    }
+  },
+  itemValue: <span class="hljs-string">'value'</span>,
+  itemText: <span class="hljs-string">'text'</span>,
+  typeaheadjs: {
+    name: <span class="hljs-string">'cities'</span>,
+    displayKey: <span class="hljs-string">'text'</span>,
+    source: cities.ttAdapter()
+  }
+});
+$tc.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">1</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Amsterdam"</span>   , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Europe"</span>    });
+$tc.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">4</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Washington"</span>  , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"America"</span>   });
+$tc.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">7</span> , <span class="hljs-string">"text"</span>: <span class="hljs-string">"Sydney"</span>      , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Australia"</span> });
+$tc.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">10</span>, <span class="hljs-string">"text"</span>: <span class="hljs-string">"Beijing"</span>     , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Asia"</span>      });
+$tc.tagsinput(<span class="hljs-string">'add'</span>, { <span class="hljs-string">"value"</span>: <span class="hljs-number">13</span>, <span class="hljs-string">"text"</span>: <span class="hljs-string">"Cairo"</span>       , <span class="hljs-string">"continent"</span>: <span class="hljs-string">"Africa"</span>    });</code></pre></div><script src="./js/typeahead.min.js"></script>
+<script src="../amazeui.tagsinput.js"></script>
+<script>
+// 输入提示
+var citynames = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: {
+    url: 'js/citynames.json',
+    filter: function(list) {
+      return $.map(list, function(cityname) {
+        return { name: cityname }; });
+    }
+  }
+});
+citynames.initialize();
+
+$('#input-sg').tagsinput({
+  typeaheadjs: {
+    name: 'citynames',
+    displayKey: 'name',
+    valueKey: 'name',
+    source: citynames.ttAdapter()
+  }
+});
+
+  // object as tags
+  var cities = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    prefetch: 'js/cities.json'
+  });
+  cities.initialize();
+
+  var $elt = $('#obj-as-tags');
+  $elt.tagsinput({
+    itemValue: 'value',
+    itemText: 'text',
+    typeaheadjs: {
+      name: 'cities',
+      displayKey: 'text',
+      source: cities.ttAdapter()
+    }
+  });
+  $elt.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
+  $elt.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
+  $elt.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
+  $elt.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
+  $elt.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
+
+// colors
+/*var cities = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: 'js/cities.json'
+});
+cities.initialize();*/
+
+var $tc = $('#tag-color');
+$tc.tagsinput({
+  tagClass: function(item) {
+    switch (item.continent) {
+      case 'Europe'   : return 'am-badge am-badge-primary';
+      case 'America'  : return 'am-badge am-badge-danger';
+      case 'Australia': return 'am-badge am-badge-success';
+      case 'Africa'   : return 'am-badge';
+      case 'Asia'     : return 'am-badge am-badge-warning';
+    }
+  },
+  itemValue: 'value',
+  itemText: 'text',
+  typeaheadjs: {
+    name: 'cities',
+    displayKey: 'text',
+    source: cities.ttAdapter()
+  }
+});
+$tc.tagsinput('add', { "value": 1 , "text": "Amsterdam"   , "continent": "Europe"    });
+$tc.tagsinput('add', { "value": 4 , "text": "Washington"  , "continent": "America"   });
+$tc.tagsinput('add', { "value": 7 , "text": "Sydney"      , "continent": "Australia" });
+$tc.tagsinput('add', { "value": 10, "text": "Beijing"     , "continent": "Asia"      });
+$tc.tagsinput('add', { "value": 13, "text": "Cairo"       , "continent": "Africa"    });
+</script>
+
+
+    <nav class="amp-pager">
+          <ul class="am-pagination">
+            <li class="am-pagination-next"><a href="options.html">Next &raquo;</a>
+            </li>
+          </ul>
+    </nav>
+  </div>
+</section>
+
+<footer class="amp-footer"><div class="am-g am-g-fixed"><div class="am-u-md-4 am-u-md-push-8"><ul class="amz-social"><li><a href="javascript: void(0)" data-am-popover="{content: 'Amaze UI 交流 Q 群：374946651'}" title="Amaze UI 用户交流群" target="_blank"><span class="am-icon-qq"></span></a></li><li><a href="http://weibo.com/allmobilize" title="云适配微博" target="_blank"><span class="am-icon-weibo"></span></a></li><li><a href="#am-wechat" title="云适配微信" data-am-modal><span class="am-icon-wechat"></span></a></li><li><a class="new-issue" href="https://github.com/allmobilize/amazeui/issues/new?title=Bug%3A%20&body=**%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0**%0A%0A%EF%BC%88%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%EF%BC%89%0A%0A**%E4%BA%A7%E7%94%9F%E7%8E%AF%E5%A2%83**%0A%0A-%20%E8%AE%BE%E5%A4%87%EF%BC%9A%EF%BC%88%E6%89%8B%E6%9C%BA%E3%80%81%E5%B9%B3%E6%9D%BF%E7%AD%89%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E6%97%B6%E5%A1%AB%E5%86%99%E6%AD%A4%E9%A1%B9%EF%BC%89%0A-%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8F%8A%E7%89%88%E6%9C%AC%EF%BC%9A%0A-%20%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80%EF%BC%9A%0A%0A**%E5%A4%8D%E7%8E%B0%E6%AD%A5%E5%A5%8F**%0A%0A1.%20%0A2.%20%0A...%20%0A%20%0A**UA:**%20%0A" target="_blank" title="Bug 反馈"><span class="am-icon-paper-plane"></span></a></li></ul></div><div class="col-md-8 col-md-pull-4 am-u-md-8 am-u-md-pull-4"><h2 class="amz-fd"><a>云适配</a></h2><ul class="amz-links"><li><a href="http://amazeui.org/about/wantu" class="am-icon-heart">&nbsp;妹子招亲</a> | <a href="http://amazeui.org/about/contact">联系我们</a></li></ul><p class="amz-cp">&copy; 2015 AllMobilize, Inc. <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>. Developed with <a href="http://www.jetbrains.com/webstorm/" target="_blank">WebStorm</a>.</p></div></div></footer><div class="am-modal am-modal-no-btn" tabindex="-1" id="am-wechat"><div class="am-modal-dialog"><div class="am-modal-hd"><a href="" class="am-close am-close-spin" data-am-modal-close>&times;</a></div><div class="am-modal-bd"><img src="http://a.static.amazeui.org/assets/2.x/i/am/qr-ui.jpg" alt="Amaze UI 微信"/><br/>在微信上关注我们</div></div></div><div class="amp-toolbar" id="amp-toolbar"><a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up" id="amp-go-top"></a></div>
+<script src="http://a.static.amazeui.org/assets/plugin/js/app.min.js"></script>
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b424d39312c46404f15e22574a531fbb";
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hm);
+  })();
+
+  (function(w, d, s) {
+    function gs(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(w , d, s ,'//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-34196034-8', 'amazeui.org');
+      ga('send', 'pageview');
+    }
+    if (w.addEventListener) { w.addEventListener('load', gs, false); }
+    else if (w.attachEvent) { w.attachEvent('onload',gs); }
+  }(window, document, 'script'));
+</script>
+</body>
+</html>
