@@ -10,37 +10,37 @@ Amaze UI 标签输入插件。
 
 **使用说明：**
 
-1. 获取 Amaze UI Chosen：
+1. 获取 Amaze UI Tagsinput
 
   - [直接下载](https://github.com/amazeui/tagsinput/archive/master.zip)
   - 使用 NPM: `npm install amazeui-tagsinput`
 
-2. 在 Amaze UI 样式之后引入 Switch 样式：
+2. 在 Amaze UI 样式之后引入 Tagsinput 样式：
 
-  Amaze UI Chosen 依赖 Amaze UI 样式。
+  Amaze UI Tagsinput 依赖 Amaze UI 样式。
 
   ```html
   <link rel="stylesheet" href="path/to/amazeui.min.css"/>
   <link rel="stylesheet" href="path/to/amazeui.tagsinput.css"/>
   ```
 
-3. 在 jQuery 之后引入 Switch 插件：
+3. 在 jQuery 之后引入 Tagsinput 插件：
 
   ```html
   <script src="path/to/jquery.min.js"></script>
   <script src="path/to/amazeui.tagsinput.min.js"></script>
   ```
 
-4. 初始化 Switch：
+4. 初始化 Tagsinput:
 
-```js
-$(function() {
-  $('#my-tags').tagsinput();
-});
-```
+  ```js
+  $(function() {
+    $('#my-tags').tagsinput();
+  });
+  ```
 
-可以监听到 jQuery Ready 事件的 DOM 也可以使用 `data-am-tagsinput` 钩子自动初始化：
+  可以监听到 jQuery Ready 事件的 DOM 也可以使用 `data-am-tagsinput` 钩子自动初始化：
 
-```html
-<input type="text" data-am-tagsinput />
-```
+  ```html
+  <input type="text" data-am-tagsinput />
+  ```
