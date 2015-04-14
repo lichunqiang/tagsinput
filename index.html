@@ -13,11 +13,11 @@
   <link rel="icon" type="image/png"
         href="http://a.static.amazeui.org/assets/i/favicon.png">
   <link rel="stylesheet"
-        href="http://cdn.amazeui.org/amazeui/2.1.0/css/amazeui.min.css">
+        href="http://cdn.amazeui.org/amazeui/2.3.0/css/amazeui.min.css">
   <link rel="stylesheet" href="http://a.static.amazeui.org/assets/plugin/css/app.min.css">
   <!--[if (gte IE 9)|!(IE)]><!-->
   <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="http://cdn.amazeui.org/amazeui/2.1.0/js/amazeui.min.js"></script>
+  <script src="http://cdn.amazeui.org/amazeui/2.3.0/js/amazeui.min.js"></script>
   <!--<![endif]-->
   <!--[if lte IE 8 ]>
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
@@ -56,26 +56,26 @@
 </ul>
 <p><strong>使用说明：</strong></p>
 <ol>
-<li><p>获取 Amaze UI Chosen：</p>
+<li><p>获取 Amaze UI Tags Input</p>
 <ul>
 <li><a href="https://github.com/amazeui/tagsinput/archive/master.zip">直接下载</a></li>
 <li>使用 NPM: <code>npm install amazeui-tagsinput</code></li>
 </ul>
 </li>
-<li><p>在 Amaze UI 样式之后引入 Switch 样式：</p>
-<p>Amaze UI Chosen 依赖 Amaze UI 样式。</p>
+<li><p>在 Amaze UI 样式之后引入 Tags Input 样式：</p>
+<p>Amaze UI Tagsinput 依赖 Amaze UI 样式。</p>
 <div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"path/to/amazeui.min.css"</span>/&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"path/to/amazeui.tagsinput.css"</span>/&gt;</span></code></pre></div></li>
-<li><p>在 jQuery 之后引入 Switch 插件：</p>
-<div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"path/to/jquery.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"path/to/amazeui.tagsinput.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre></div></li>
-<li><p>初始化 Switch：</p>
-</li>
-</ol>
+<li><p>在 jQuery 之后引入 Tags Input 插件：</p>
+<div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"path/to/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"path/to/amazeui.tagsinput.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre></div></li>
+<li><p>初始化 Tags Input:</p>
 <div class="doc-code demo-highlight"><pre><code class="javascript">$(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  $(<span class="hljs-string">'#my-tags'</span>).tagsinput();
+$(<span class="hljs-string">'#my-tags'</span>).tagsinput();
 });</code></pre></div><p>可以监听到 jQuery Ready 事件的 DOM 也可以使用 <code>data-am-tagsinput</code> 钩子自动初始化：</p>
-<div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">data-am-tagsinput</span> /&gt;</span></code></pre></div>
+<div class="doc-code demo-highlight"><pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">data-am-tagsinput</span> /&gt;</span></code></pre></div></li>
+</ol>
+
 
     <nav class="amp-pager">
     </nav>
