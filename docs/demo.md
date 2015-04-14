@@ -11,7 +11,6 @@ next: options.html
 #### 使用 input
 
 在 `input` 上添加 `data-role="tagsinput"` 属性，自动初始化为标签输入框。
-  automatically change it to a tags input field.</p>
 
 `````html
 <p>
@@ -64,6 +63,49 @@ $('#tags-select').val();
 
 $('#tags-select').tagsinput('items');
 // ["Amsterdam","Washington","Sydney","Beijing","Cairo"]
+```
+
+### 在表单中使用
+
+`````html
+<style>
+  .am-form .am-tagsinput {
+    min-width: 100%;
+  }
+</style>
+<div class="am-g">
+  <div class="am-u-md-8 am-u-md-centered">
+    <form class="am-form" action="" method="post">
+      <div class="am-form-group">
+        <label for="tags-10">输入标签：</label>
+        <input id="tags-10" type="text" value="" data-role="tagsinput"/>
+      </div>
+      <div class="am-align-right">
+        <input type="submit" class="am-btn am-btn-primary" value="submit"/>
+      </div>
+    </form>
+  </div>
+</div>
+`````
+```html
+<style>
+  .am-form .am-tagsinput {
+    min-width: 100%;
+  }
+</style>
+<div class="am-g">
+  <div class="am-u-md-8 am-u-md-centered">
+    <form class="am-form" action="" method="post">
+      <div class="am-form-group">
+        <label for="tags-10">输入标签：</label>
+        <input id="tags-10" type="text" value="" data-role="tagsinput"/>
+      </div>
+      <div class="am-align-right">
+        <input type="submit" class="am-btn am-btn-primary" value="submit"/>
+      </div>
+    </form>
+  </div>
+</div>
 ```
 
 ### 输入提示

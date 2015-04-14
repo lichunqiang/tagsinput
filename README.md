@@ -10,12 +10,12 @@ Amaze UI 标签输入插件。
 
 **使用说明：**
 
-1. 获取 Amaze UI Tagsinput
+1. 获取 Amaze UI Tags Input
 
   - [直接下载](https://github.com/amazeui/tagsinput/archive/master.zip)
   - 使用 NPM: `npm install amazeui-tagsinput`
 
-2. 在 Amaze UI 样式之后引入 Tagsinput 样式：
+2. 在 Amaze UI 样式之后引入 Tags Input 样式：
 
   Amaze UI Tagsinput 依赖 Amaze UI 样式。
 
@@ -24,14 +24,14 @@ Amaze UI 标签输入插件。
   <link rel="stylesheet" href="path/to/amazeui.tagsinput.css"/>
   ```
 
-3. 在 jQuery 之后引入 Tagsinput 插件：
+3. 在 jQuery 之后引入 Tags Input 插件：
 
   ```html
   <script src="path/to/jquery.min.js"></script>
   <script src="path/to/amazeui.tagsinput.min.js"></script>
   ```
 
-4. 初始化 Tagsinput:
+4. 初始化 Tags Input:
 
   ```js
   $(function() {
