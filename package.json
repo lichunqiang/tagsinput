@@ -1,7 +1,7 @@
 {
   "name": "amazeui-tagsinput",
-  "version": "0.5.1",
-  "description": "jQuery tags input plugin based on Amaze UI.",
+  "version": "0.5.2",
+  "description": "Amaze UI 标签输入插件",
   "main": "amazeui.tagsinput.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/amazeui/tagsinput/issues"
   },
-  "homepage": "https://github.com/amazeui/tagsinput",
+  "homepage": "http://amazeui.github.io/tagsinput/",
   "licenses": [
     {
       "type": "MIT",
@@ -32,20 +32,20 @@
   "devDependencies": {
     "amazeui-doc-util": "latest",
     "browser-sync": "^2.3.0",
-    "browserify": "^8.1.0",
+    "browserify": "^13.0.1",
     "browserify-shim": "^3.8.2",
-    "del": "^1.1.1",
+    "del": "^2.2.1",
     "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-csso": "^0.2.9",
-    "gulp-gh-pages": "^0.4.0",
-    "gulp-less": "^2.0.1",
-    "gulp-load-plugins": "^0.8.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.4",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "markit-json": "^0.2.1",
     "run-sequence": "^1.0.2",
-    "through2": "^0.6.3",
+    "through2": "^2.0.1",
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
